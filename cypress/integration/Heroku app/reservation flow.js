@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-describe('resevation to an appointment',()=>{
+describe('resevation to an appointment', () => {
 
-    it('Book an appointment with valid data',()=>{
+    it('Book an appointment with valid data', () => {
         cy.visit('https://katalon-demo-cura.herokuapp.com/')
         cy.get('#btn-make-appointment').click()
         //cy.url().should('have.text','profile.php#login')
@@ -12,7 +12,7 @@ describe('resevation to an appointment',()=>{
 
     })
 
-    it('make Appointment page',()=>{
+    it('make Appointment page', () => {
         cy.get('#combo_facility').select('Hongkong CURA Healthcare Center')
         cy.get('#chk_hospotal_readmission').check()
         cy.get('#radio_program_medicaid').check()
@@ -22,13 +22,8 @@ describe('resevation to an appointment',()=>{
         cy.get('#btn-book-appointment').click()
     })
 
-        it('Back to Home Page',()=>{
-
+    it('Back to Home Page', () => {
         cy.contains('Go to Homepage').click()
-
-        })
-
-    
-        
     })
+})
 
